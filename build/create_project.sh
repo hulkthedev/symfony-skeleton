@@ -14,6 +14,7 @@ TAG="2.1.8"
 
 docker run --rm -i -t \
     -v "${PROJECT_DIR}":/app \
+    --user "$(id -u)":"$(id -g)" \
     --entrypoint="/bin/bash" \
     "${IMAGE}:${TAG}" \
-    -c "composer install --prefer-dist --no-progress --no-interaction --no-suggest --optimize-autoloader"
+    -c "composer install --prefer-dist --no-progress --no-interaction --optimize-autoloader"
