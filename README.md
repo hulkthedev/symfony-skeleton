@@ -11,7 +11,7 @@ Simple docker based symfony 5.4 website skeleton template
 ##### Build
 
 ```bash
-chmod +x /build/create_project.sh
+chmod +x /create_project.sh
 ```
 
 > build skeleton
