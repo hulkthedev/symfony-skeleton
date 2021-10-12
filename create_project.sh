@@ -2,14 +2,18 @@
 
 set -eo pipefail
 
-BUILD_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-PROJECT_DIR="$(dirname "${BUILD_DIR}")";
+THIS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
+COMPOSER_FILE_DIR="/website-skeleton";
+if [ "${1}" = "skeleton" ]; then
+    COMPOSER_FILE_DIR="/skeleton";
+fi
 
 IMAGE="composer"
 TAG="2.1.8"
 
 docker run --rm -i -t \
-    -v "${PROJECT_DIR}":/app \
+    -v "${THIS_DIR}${COMPOSER_FILE_DIR}":/app \
     --user "$(id -u)":"$(id -g)" \
     --entrypoint="/bin/bash" \
     "${IMAGE}:${TAG}" \
