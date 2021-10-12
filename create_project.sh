@@ -10,7 +10,7 @@ if [ "${1}" = "skeleton" ]; then
 fi
 
 IMAGE="composer"
-TAG="2.1.8"
+TAG="2.1.9"
 
 docker run --rm -i -t \
     -v "${THIS_DIR}${COMPOSER_FILE_DIR}":/app \
