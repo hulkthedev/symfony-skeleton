@@ -1,6 +1,5 @@
 # Symfony 5.4 Website Skeleton Template
 
-[![Version](https://img.shields.io/badge/Version-2.0.0-blue)](https://github.com/hulkthedev/cryptotracker)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 Simple docker based symfony 5.4 website skeleton template
